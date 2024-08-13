@@ -128,5 +128,26 @@ fig.add_trace(
     ).data[0]
 )
 
+# Update layout
+fig.update_layout(
+    mapbox_style="open-street-map",
+    margin={"r":0,"t":50,"l":0,"b":10},
+    title=dict(
+        text="Belle Tire Chicago DMA with Local Competitors",
+        font=dict(size=24, family="Arial", color="Black"),
+        x=0.5,
+        xanchor='center'
+    ),
+    legend=dict(
+        title="Legend",
+        x=0.01,
+        y=0.99,
+        bgcolor="rgba(255, 255, 255, 0.8)",
+        bordercolor="black",
+        borderwidth=1
+    )
+)
+
+
 #display in streamlit
 st.plotly_chart(fig)
